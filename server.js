@@ -145,92 +145,92 @@ app.post("/join", (req, res) => {
 					// Add sample data
 					if (req.body.sample === "on" || req.body.email.includes("sample@test") || req.body.email.includes("rv89uj4fui678fwgt3")) {
 						let transactions = [{
-							date: "2021-10-04",
+							date: new Date().getFullYear()+"-10-04",
 							isIn: false,
 							amount: 9630,
 							note: "Badminton & Billiards 🏸&🎱"
 						}, {
-							date: "2021-10-04",
+							date: new Date().getFullYear()+"-10-04",
 							isIn: false,
 							amount: 9840,
 							note: "Dinner@AML"
 						}, {
-							date: "2021-10-03",
+							date: new Date().getFullYear()+"-10-03",
 							isIn: true,
 							amount: 20000,
 							note: "Thank You #Gift"
 						}, {
-							date: "2021-10-01",
+							date: new Date().getFullYear()+"-10-01",
 							isIn: false,
 							amount: 10833,
 							note: "Crabs"
 						}, {
-							date: "2021-10-02",
+							date: new Date().getFullYear()+"-10-02",
 							isIn: false,
 							amount: 8200,
 							note: "Tickets"
 						}, {
-							date: "2021-10-01",
+							date: new Date().getFullYear()+"-10-01",
 							isIn: false,
 							amount: 5926,
 							note: "Grocery"
 						}, {
-							date: "2021-09-27",
+							date: new Date().getFullYear()+"-09-27",
 							isIn: false,
 							amount: 1794,
 							note: "Uber"
 						}, {
-							date: "2021-09-27",
+							date: new Date().getFullYear()+"-09-27",
 							isIn: true,
 							amount: 9750,
 							note: "Stock Market - TSLA: -3.9 x 25"
 						}, {
-							date: "2021-09-26",
+							date: new Date().getFullYear()+"-09-26",
 							isIn: false,
 							amount: 3270,
 							note: "Dinner @ Mr. Huang's"
 						}, {
-							date: "2021-09-25",
+							date: new Date().getFullYear()+"-09-25",
 							isIn: false,
 							amount: 4382,
 							note: "Lunch @ Jungle Frog"
 						}, {
-							date: "2021-09-25",
+							date: new Date().getFullYear()+"-09-25",
 							isIn: false,
 							amount: 4123,
 							note: "Go Carting"
 						}, {
-							date: "2021-09-25",
+							date: new Date().getFullYear()+"-09-25",
 							isIn: true,
 							amount: 60000,
 							note: "This weeks #pay"
 						}, {
-							date: "2021-09-15",
+							date: new Date().getFullYear()+"-09-15",
 							isIn: false,
 							amount: 72000,
 							note: "Rent"
 						}, {
-							date: "2021-09-15",
+							date: new Date().getFullYear()+"-09-15",
 							isIn: false,
 							amount: 8320,
 							note: "Starbucks"
 						}, {
-							date: "2021-09-08",
+							date: new Date().getFullYear()+"-09-08",
 							isIn: false,
 							amount: 42738,
 							note: "Stock Sold"
 						}, {
-							date: "2021-09-07",
+							date: new Date().getFullYear()+"-09-07",
 							isIn: true,
 							amount: 42738,
 							note: "#Stock Sold"
 						}, {
-							date: "2021-09-07",
+							date: new Date().getFullYear()+"-09-07",
 							isIn: false,
 							amount: 1233,
 							note: "Uber"
 						}, {
-							date: "2021-09-07",
+							date: new Date().getFullYear()+"-09-07",
 							isIn: false,
 							amount: 3499,
 							note: "Brunch"
@@ -243,7 +243,7 @@ app.post("/join", (req, res) => {
 						let randomNouns = ["assignment", "editor", "pie", "patience", "university", "republic", "customer", "river", "awareness", "bedroom", "message", "understanding", "measurement", "article", "speech", "night", "difference", "bread", "photo", "science", "property", "difficulty", "tooth", "surgery", "negotiation", "volume", "chocolate", "apartment", "two", "queen", "scene", "driver", "wedding", "hall", "law", "personality", "movie", "thing", "historian", "arrival", "city", "inspection", "assistant", "emotion", "pizza", "orange", "information", "drawing", "fortune", "security", "dinner", "possibility", "judgment", "poetry", "depth", "reading", "song", "grandmother", "ear", "ladder", "recognition", "height", "profession", "wife", "village", "education", "operation", "presentation", "entertainment", "analyst", "competition", "dirt", "definition", "president", "dad", "mom", "teacher", "advertising", "collection", "woman", "man", "agreement", "examination", "alcohol", "friendship", "bathroom", "revenue", "platform", "delivery", "temperature", "lake", "suggestion", "permission", "responsibility", "aspect", "child", "member", "leader", "country", "significance", "phone", "poem", "library", "opportunity", "outcome", "worker", "dealer", "employer", "language", "teaching", "county", "shopping", "camera", "tea", "politics", "tale", "refrigerator", "gene", "philosophy", "media", "environment", "girlfriend", "injury", "response", "energy", "economics", "reality", "method", "psychology", "strategy", "freedom", "climate", "safety", "lady", "people", "resolution", "extent", "quality", "sample", "administration", "restaurant", "internet", "decision", "procedure", "storage", "society", "writer", "accident", "client", "proposal", "committee", "bath", "cigarette", "history", "priority", "election", "highway", "topic", "membership", "reception", "efficiency", "assistance", "year", "feedback", "foundation", "statement", "atmosphere", "context", "cousin", "obligation", "studio", "promotion", "basket", "coffee", "passenger", "intention", "ratio", "currency", "hotel", "assumption", "town", "tradition", "drawer", "meat", "ad", "application", "growth", "problem", "leadership", "emphasis", "device", "organization", "hospital", "ability", "percentage", "power", "theory", "engineering", "mode", "anxiety", "wealth", "complaint", "pollution", "artisan", "student", "disease", "effort", "health", "government", "audience", "classroom", "variety", "breath", "income", "perspective", "marketing", "police", "hearing", "truth", "heart", "cancer", "inflation", "interaction", "transportation", "cell", "preparation", "entry", "construction", "world", "concept", "contribution", "quantity", "charity", "oven", "childhood", "expression", "management", "excitement", "supermarket", "thanks", "magazine", "writing", "map", "confusion", "relationship", "baseball", "communication", "midnight", "recording", "warning", "relation", "sector", "desk", "activity", "goal", "error", "agency", "cheek", "location", "attitude", "user", "guest", "tennis", "disk", "variation", "departure", "community", "imagination", "replacement", "establishment", "diamond", "possession", "description", "recipe", "candidate", "consequence", "area", "mall", "explanation", "initiative", "medicine", "series", "month", "salad", "lab", "bird", "death", "appointment", "advice", "memory", "skill", "uncle", "clothes", "professor", "garbage", "region", "bonus", "success", "revolution", "maintenance", "meal", "preference", "recommendation", "distribution", "sister", "penalty", "nation", "unit", "tension", "direction", "shirt", "airport", "presence", "disaster", "fact", "industry", "director", "computer", "person", "music", "engine", "guidance", "idea", "contract", "event", "mood", "database", "throat", "resource", "debt", "celebration", "estate", "attention", "manufacturer", "sympathy", "television", "discussion", "flight", "gate", "mud", "addition", "development", "chemistry", "tongue", "improvement", "moment", "investment", "passion", "mixture", "manager", "connection", "introduction", "video", "signature", "instance", "hat", "birthday", "perception", "association", "son", "performance", "knowledge", "family", "weakness", "blood", "appearance", "army", "reaction", "enthusiasm", "population", "marriage", "apple", "basis", "football", "control", "role", "insurance", "week", "ambition", "grocery", "payment", "secretary", "painting", "girl", "king", "meaning", "steak", "newspaper", "guitar", "exam", "actor", "soup", "importance", "homework", "situation", "comparison", "protection", "chapter", "news", "farmer", "instruction", "virus", "office", "requirement", "paper", "championship", "union", "policy", "drama", "art", "player", "love", "finding", "solution", "menu", "cookie", "youth", "piano", "analysis", "elevator", "potato", "product", "software", "insect", "loss", "winner", "data", "beer", "sir", "college", "speaker", "singer", "trainer", "independence", "length", "technology", "nature", "boyfriend", "argument", "stranger", "affair", "criticism", "food", "story", "reputation", "equipment", "category", "setting", "conversation", "wood", "indication", "version", "failure", "math", "impression", "road", "housing", "physics", "hair", "way", "poet", "literature", "chest", "thought", "opinion", "combination", "cabinet", "system", "honey", "conclusion", "inspector", "buyer", "employment", "fishing", "department", "vehicle", "reflection", "courage", "selection", "owner", "satisfaction", "employee", "depression", "session"]
 						let randomTransactions = []
 						let dataNum = 0;
-						for (let year = 2011; year < 2022; year++) {
+						for (let year = new Date().getFullYear() - 10; year <= new Date().getFullYear(); year++) {
 							for (let month = 1; month < 13; month++) {
 								for (let day = 1; day < 31; day++) {
 									let ranSmall = +(10 * Math.random()).toFixed(0);
@@ -273,7 +273,7 @@ app.post("/join", (req, res) => {
 					if (req.body.random === "on" || req.body.email.includes("random@test") || req.body.email.includes("ebdrfcgtvy567u")) {
 						let randomTransactions = []
 						let dataNum = 0;
-						for (let year = 2011; year < 2022; year++) {
+						for (let year = new Date().getFullYear() - 10; year <= new Date().getFullYear(); year++) {
 							for (let month = 1; month < 13; month++) {
 								for (let day = 1; day < 31; day++) {
 									let ranSmall = +(10 * Math.random()).toFixed(0);
